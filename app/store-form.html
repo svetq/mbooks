@@ -1,0 +1,23 @@
+<h2 *ngIf="!isEditing" >Add a new Store</h2>
+<h2 *ngIf="isEditing" >Update a Store</h2>
+
+<label>Store name:<input  class="form-control" id="storeName" value="{{store?.Name}}" [(ngModel)]="store.Name"/>
+</label>
+<button *ngIf="isEditing" class="btn btn-primary" (click) = "saveChanges()">Update Name</button>
+
+<div *ngIf="isEditing">
+    <add-single-book [bookNames]="bookNames" [store]="store" [books]="books">
+
+    </add-single-book>
+</div>
+
+<div *ngIf="books && isEditing" >
+    <add-multiple-books [books]="books" [store]="store"
+                        (onStoreUpdate)="onStoreUpdate($event)">
+    </add-multiple-books>
+</div>
+
+
+<!--<button *ngIf="isEditing" class="btn btn-primary" (click) = "deleteStore(store);">Delete Store</button>-->
+<!--<button *ngIf="isEditing" class="btn btn-primary" (click) = "cancelEditing();">Cancel Editing</button>-->
+<button *ngIf="!isEditing" class="btn btn-primary" (click) = "add()">Add Store</button>

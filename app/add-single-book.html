@@ -1,0 +1,7 @@
+<label>Search available books:
+    <input [(ngModel)]="selected"
+           [typeahead]="bookNames"
+           (typeaheadOnSelect)="typeaheadOnSelect($event)"
+           class="form-control">
+</label>
+<button class="btn btn-primary" (click)="addBook(store)">Add selected book</button>

@@ -1,0 +1,28 @@
+<div id="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div *ngIf="books.length > 0">
+                <ul class="list-group">
+                    <li (click) = "editForm(book)" class="list-group-item" *ngFor="let book of books">
+                        <div id="name">
+                            <h2><a>book: {{book.Name}}!</a></h2>
+                        </div>
+                        <div id="img">
+                            <img src="{{book.PictureURL}}" width="300" height="445">
+                        </div>
+                        <button class="btn btn-primary" (click) = "editForm(book)">Edit</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4 form-group well center" *ngIf="book" >
+            <book-form [book] = "book" [isUpdating]="isUpdating"
+                       (onBookUpdate)="onBookUpdate($event)"
+                       (onBookCreate)="onBookCreate($event)"
+                       (onBookDelete)="onBookDelete($event)"
+                       (onCancel)="onCancel($event)">
+            </book-form>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,17 @@
+<div id="container">
+    <div class="row">
+        <select-store class="col-md-4" [stores]="stores" [store]="store" [isEditing]="isEditing"
+                      (onSelectStore)="onSelectStore($event)">
+        </select-store>
+        <store-form class="col-md-4" [store]="store" [isEditing]="isEditing"
+                    (onStoreUpdate)="onStoreUpdate($event)"
+                    (onStoreCreate)="onStoreCreate($event)"
+                    (onStoreDelete)="onStoreDelete($event)"
+                    (onCancel)="onCancel($event)">
+        </store-form>
+        <store-options class="col-md-4" *ngIf="isEditing" [books]="books" [store]="store" [isEditing]="isEditing"
+                       (onStoreDelete)="onStoreDelete($event)"
+                       (onCancel)="onCancel($event)">
+        </store-options>
+    </div>
+</div>

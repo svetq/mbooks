@@ -1,0 +1,14 @@
+<div class="col-md-2"></div>
+<div *ngIf = "book" class="col-md-4">
+    <h2>Book details for: {{book.Name}}</h2>
+    <img src="{{book.PictureURL}}">
+</div>
+<div *ngIf = "book" class="col-md-4">
+    <BR><BR><BR><BR><BR><BR><BR><BR>
+    <label>Author:</label> <input class="form-control" id="bookAuthor" value="{{book.Author}}" [(ngModel)]="book.Author"/>
+    <label>Price:</label> <input class="form-control" id="bookPrice" value="{{book.Price}}" [(ngModel)]="book.Price"/>
+    <button class="btn btn-primary" (click)="editBook()">Edit</button>
+    <button class="btn btn-primary" (click)="deleteBook(book.Id);">Delete</button>
+    <button class="btn btn-primary" (click)="allBooks();">All Books</button>
+</div>
+<div class="col-md-2"></div>

@@ -1,0 +1,14 @@
+<ul class="list-group">
+    <li class="list-group-item" *ngIf="store">
+        <h2><a>{{store.Name}}!</a></h2>
+        <!--<button class="btn btn-primary" (click) = "editStoreInfo(store);">Edit</button>-->
+        <button class="btn btn-primary" (click) = "showBooks(store.Id);">Show Books</button>
+        <button class="btn btn-warning" (click) = "cancelEditing();">Cancel Editing</button>
+        <button class="btn btn-danger" (click) = "deleteStore(store);">Delete Store</button>
+        <ul *ngIf = "books" class="list-group">
+            <li class="list-group-item" *ngFor="let book of books">
+                <h2>{{book.Name}}!</h2>
+            </li>
+        </ul>
+    </li>
+</ul>

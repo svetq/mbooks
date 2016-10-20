@@ -1,0 +1,10 @@
+    <h2 *ngIf="!isUpdating" >Add a new book</h2>
+    <h2 *ngIf="isUpdating" >Update a book</h2>
+    <label>Book name:</label> <input  class="form-control" #bookName value="{{book?.Name}}" [(ngModel)]="book.Name"/>
+    <label>Author:</label> <input class="form-control"  #bookAuthor value="{{book?.Author}}" [(ngModel)]="book.Author"/>
+    <label>Price:</label> <input class="form-control"  #bookPrice value="{{book?.Price}}" [(ngModel)]="book.Price"/>
+    <label>Picture URL:</label> <input  class="form-control"  #bookUrl value="{{book?.PictureURL}}" [(ngModel)]="book.PictureURL"/>
+    <button *ngIf="isUpdating" class="btn btn-primary" (click) = "saveChanges()">Save Changes</button>
+    <button *ngIf="isUpdating" class="btn btn-primary" (click) = "deleteBook(book);">Delete</button>
+    <button *ngIf="isUpdating" class="btn btn-primary" (click) = "cancelEditing();">Cancel</button>
+    <button *ngIf="!isUpdating" class="btn btn-primary" (click) = "add()">Add Book</button>
