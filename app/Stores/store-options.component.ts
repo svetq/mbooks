@@ -1,9 +1,9 @@
 import {Component, Output, EventEmitter} from "@angular/core";
 import {StoreService} from "./store-service";
 import {Input} from '@angular/core';
-import {Book} from "./books/book";
+import {Book} from "../Books/book";
 import {Store} from "./store";
-import {BookService} from "./Books/book-service";
+import {BookService} from "../Books/book-service";
 
 @Component({
     selector: 'store-options',

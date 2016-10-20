@@ -1,8 +1,8 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DashboardComponent } from "./dashboard.component";
+import { DashboardComponent } from "./Books/dashboard.component";
 import { BookDetails } from "./Books/book-details.component"
-import { StoresComponent } from './stores.component'
+import { StoresComponent } from './Stores/stores.component'
 
 var appRoutes = [
     {

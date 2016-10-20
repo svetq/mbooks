@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { StoreService } from './store-service'
 import { Store } from './store'
-import {Book} from "./books/book";
-import {BookService} from "./Books/book-service";
+import {Book} from "../Books/book";
+import {BookService} from "../Books/book-service";
 
 @Component({
     moduleId: module.id,

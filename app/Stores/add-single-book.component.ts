@@ -1,10 +1,10 @@
 import {FormControl, FormGroup} from "@angular/forms";
 import { Observable } from 'rxjs/Observable';
 import {StoreService} from "./store-service";
-import {BookService} from "./Books/book-service";
-import { TypeaheadMatch } from '../node_modules/ng2-bootstrap/components/typeahead/typeahead-match.class';
+import {BookService} from "../Books/book-service";
+import { TypeaheadMatch } from '../../node_modules/ng2-bootstrap/components/typeahead/typeahead-match.class';
 import {Component, Input} from '@angular/core';
-import {Book} from "./books/book";
+import {Book} from "../Books/book";
 import {Store} from "./store";
 
 @Component({

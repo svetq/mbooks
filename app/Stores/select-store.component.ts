@@ -3,8 +3,8 @@
  */
 import {Component, Input, Output, EventEmitter} from '@angular/core';
 
-import { Store } from '../store';
-import { StoreService } from '../store-service';
+import { Store } from './store';
+import { StoreService } from './store-service';
 //import { EventEmitter } from "@angular/common/src/facade/async";
 
 @Component({

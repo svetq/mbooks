@@ -3,20 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { DashboardComponent } from './dashboard.component';
+import { DashboardComponent } from './Books/dashboard.component';
 import { BookDetails } from './Books/book-details.component';
 import { BookForm } from './Books/book-form.component';
 import { BookService } from './Books/book-service';
 import { routing } from './app.routing';
 import { AppComponent } from './app.components';
-import { StoresComponent } from './stores.component'
-import { StoreService } from './store-service';
+import { StoresComponent } from './Stores/stores.component'
+import { StoreService } from './Stores/store-service';
 import { StoreForm } from './Stores/store-form.component'
 import { TypeaheadModule, DropdownModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { SelectStore } from './Stores/select-store.component'
-import { AddSingleBook } from "./add-single-book.component";
-import { AddMultipleBooks } from './add-multiple-books.component'
-import { StoreOptions } from './store-options.component'
+import { AddSingleBook } from "./Stores/add-single-book.component";
+import { AddMultipleBooks } from './Stores/add-multiple-books.component'
+import { StoreOptions } from './Stores/store-options.component'
 
 
 @NgModule({
