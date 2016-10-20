@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
                         </div>
                         <ul class="nav navbar-nav">
                           <li><a routerLink="stores">Stores</a></li>
-                          <li><a routerLink="">Books</a></li> 
+                          <li><a routerLink="books">Books</a></li> 
                         </ul>
                   </div>
                </nav>

@@ -1,18 +1,18 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DashboardComponent } from "./Books/dashboard.component";
+import { BooksComponent } from "./Books/books.component";
 import { BookDetails } from "./Books/book-details.component"
 import { StoresComponent } from './Stores/stores.component'
 
 var appRoutes = [
     {
         path: '',
-        redirectTo: '/dashboard',
+        redirectTo: '/books',
         pathMatch: 'full'
     },
     {
-        path: 'dashboard',
-        component: DashboardComponent
+        path: 'books',
+        component: BooksComponent
     },
     {
         path: 'book/:id',

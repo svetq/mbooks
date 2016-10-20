@@ -5,13 +5,13 @@ import { BookService } from './book-service';
 import { Router } from '@angular/router';
 
 @Component({
-    selector: 'my-dashboard',
+    selector: 'books',
     moduleId: module.id,
-    templateUrl: 'dashboard.html',
+    templateUrl: 'books.html',
     providers: [BookService]
 })
 
-export class DashboardComponent implements OnInit {
+export class BooksComponent implements OnInit {
 
     public books: Book[];
     public book: Book;
