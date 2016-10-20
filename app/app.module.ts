@@ -13,7 +13,7 @@ import { StoresComponent } from './stores.component'
 import { StoreService } from './store-service';
 import { StoreForm } from './store-form.component'
 import { TypeaheadModule, DropdownModule } from 'ng2-bootstrap/ng2-bootstrap';
-import { SelectStore } from './select-store.component'
+import { SelectStore } from './Stores/select-store.component'
 import { AddSingleBook } from "./add-single-book.component";
 import { AddMultipleBooks } from './add-multiple-books.component'
 import { StoreOptions } from './store-options.component'
