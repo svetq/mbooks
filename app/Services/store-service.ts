@@ -3,8 +3,8 @@ import { Http } from '@angular/http';
 
 
 import 'rxjs/add/operator/toPromise';
-import {Book} from "../Books/book";
-import { Store } from '../Stores/store';
+import {Book} from "../Books/model/book";
+import { Store } from '../Stores/model/store';
 
 
 @Injectable()

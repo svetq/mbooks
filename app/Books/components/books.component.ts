@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
-import {Book} from "./book";
-import { BookService } from '../Services/book-service';
+import {Book} from "../model/book";
+import { BookService } from '../../Services/book-service';
 import { Router } from '@angular/router';
 
 @Component({
     selector: 'books',
     moduleId: module.id,
-    templateUrl: 'books.html',
+    templateUrl: '../views/books.html',
     providers: [BookService]
 })
 

@@ -1,12 +1,12 @@
 import { Component, EventEmitter, OnInit, Input, Output, SimpleChange, OnChanges } from '@angular/core';
 
-import {Book} from "./book";
-import { BookService } from '../Services/book-service';
+import {Book} from "../model/book";
+import { BookService } from '../../Services/book-service';
 
 @Component({
     selector: 'book-form',
     moduleId: module.id,
-    templateUrl: 'book-form.html',
+    templateUrl: '../views/book-form.html',
     providers: [BookService]
 })
 

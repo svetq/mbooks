@@ -3,14 +3,14 @@
  */
 import {Component, Input, Output, EventEmitter} from '@angular/core';
 
-import { Store } from './store';
-import { StoreService } from '../Services/store-service';
+import { Store } from '../model/store';
+import { StoreService } from '../../Services/store-service';
 //import { EventEmitter } from "@angular/common/src/facade/async";
 
 @Component({
     selector: 'select-store',
     moduleId: module.id,
-    templateUrl: 'select-store.html',
+    templateUrl: '../views/select-store.html',
     providers: [StoreService]
 })
 

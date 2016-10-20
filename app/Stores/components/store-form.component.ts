@@ -1,18 +1,15 @@
 import { Component, EventEmitter, OnInit, Input, Output, SimpleChange, OnChanges } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
-import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
-import { TypeaheadMatch } from '../../node_modules/ng2-bootstrap/components/typeahead/typeahead-match.class';
 
-import {Book} from "../Books/book";
-import { Store } from './store';
-import { StoreService } from '../Services/store-service';
-import { BookService } from '../Services/book-service';
+import {Book} from "../../Books/model/book";
+import { Store } from '../model/store';
+import { StoreService } from '../../Services/store-service';
+import { BookService } from '../../Services/book-service';
 
 @Component({
     selector: 'store-form',
     moduleId: module.id,
-    templateUrl: 'store-form.html',
+    templateUrl: '../views/store-form.html',
     providers: [StoreService]
 })
 
