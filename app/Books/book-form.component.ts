@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Input, Output, SimpleChange, OnChanges } from '@angular/core';
 
 import {Book} from "./book";
-import { BookService } from './book-service';
+import { BookService } from '../Services/book-service';
 
 @Component({
     selector: 'book-form',

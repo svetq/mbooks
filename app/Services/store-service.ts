@@ -4,7 +4,7 @@ import { Http } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 import {Book} from "../Books/book";
-import { Store } from './store';
+import { Store } from '../Stores/store';
 
 
 @Injectable()

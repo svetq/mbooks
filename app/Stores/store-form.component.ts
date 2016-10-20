@@ -6,8 +6,8 @@ import { TypeaheadMatch } from '../../node_modules/ng2-bootstrap/components/type
 
 import {Book} from "../Books/book";
 import { Store } from './store';
-import { StoreService } from './store-service';
-import { BookService } from '../Books/book-service';
+import { StoreService } from '../Services/store-service';
+import { BookService } from '../Services/book-service';
 
 @Component({
     selector: 'store-form',

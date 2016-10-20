@@ -6,11 +6,11 @@ import { HttpModule } from '@angular/http';
 import { BooksComponent } from './Books/books.component';
 import { BookDetails } from './Books/book-details.component';
 import { BookForm } from './Books/book-form.component';
-import { BookService } from './Books/book-service';
+import { BookService } from './Services/book-service';
 import { routing } from './app.routing';
 import { AppComponent } from './app.components';
 import { StoresComponent } from './Stores/stores.component'
-import { StoreService } from './Stores/store-service';
+import { StoreService } from './Services/store-service';
 import { StoreForm } from './Stores/store-form.component'
 import { TypeaheadModule, DropdownModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { SelectStore } from './Stores/select-store.component'
