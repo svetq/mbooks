@@ -1,12 +1,14 @@
 import { Component, EventEmitter, OnInit, Input, Output, SimpleChange, OnChanges } from '@angular/core';
 
-import {Book} from "../model/book";
-import { BookService } from '../../Services/book-service';
+import {Book} from "./book";
+import { BookService } from './book-service';
+
+import {ToastsManager} from 'ng2-toastr/ng2-toastr';
 
 @Component({
     selector: 'book-form',
     moduleId: module.id,
-    templateUrl: '../views/book-form.html',
+    templateUrl: './book-form.html',
     providers: [BookService]
 })
 
@@ -42,7 +44,7 @@ export class BookForm implements OnChanges{
     @Output() onBookDelete = new EventEmitter<Book>();
     @Output() onCancel = new EventEmitter<Book>();
 
-    constructor(private bookService: BookService) {
+    constructor(private bookService: BookService, private toastr: ToastsManager) {
     }
 
     add(): void {
@@ -50,6 +52,7 @@ export class BookForm implements OnChanges{
             .then((res) => {
                 this.resetForm();
                 this.onBookCreate.emit(res as Book);
+                this.toastr.success('You are awesome!', 'Success!', {toastLife: 3000});
             });
     }
 

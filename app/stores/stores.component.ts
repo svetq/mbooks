@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { StoreService } from '../../Services/store-service'
-import { Store } from '../model/store'
-import {Book} from "../../Books/model/book";
-import {BookService} from "../../Services/book-service";
+import { StoreService } from './store-service'
+import { Store } from './store'
+import {Book} from "../books/book";
+import {BookService} from "../books/book-service";
 
 @Component({
     moduleId: module.id,
     selector: 'stores',
-    templateUrl: '../views/stores.html',
+    templateUrl: './stores.html',
     providers: [StoreService]
 
 })
@@ -58,8 +58,6 @@ export class StoresComponent implements OnInit{
 
     onStoreCreate(stores){
         this.stores = stores;
-        // this.storeService.getStores()
-        //     .then((stores) => this.stores = stores);
     }
 
     showBooks(){

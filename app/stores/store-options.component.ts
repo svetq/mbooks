@@ -1,15 +1,14 @@
 import {Component, Output, EventEmitter} from "@angular/core";
-import {StoreService} from "../../Services/store-service";
+import {StoreService} from "./store-service";
 import {Input} from '@angular/core';
-import {Book} from "../../Books/model/book";
-import {Store} from "../model/store";
-import {BookService} from "../../Services/book-service";
+import {Book} from "../books/book";
+import {Store} from "./store";
 
 @Component({
     selector: 'store-options',
     moduleId: module.id,
-    templateUrl: '../views/store-options.html',
-    providers: [StoreService, BookService]
+    templateUrl: './store-options.html',
+    providers: [StoreService]
 })
 
 export class StoreOptions{
@@ -23,7 +22,7 @@ export class StoreOptions{
     @Output() onStoreDelete = new EventEmitter<Store>();
     @Output() onCancel = new EventEmitter<Store>();
 
-    constructor(private storeService:StoreService, private bookService:BookService){
+    constructor(private storeService:StoreService){
         this.books = [];
         this.booksToAdd = [];
     }

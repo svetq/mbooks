@@ -1,15 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-
+import {ToastsManager} from 'ng2-toastr/ng2-toastr';
 
 import 'rxjs/add/operator/toPromise';
-import {Book} from "../Books/model/book";
-import { Store } from '../Stores/model/store';
+import { Store } from './store';
 
 
 @Injectable()
 export class StoreService {
-    constructor(private http: Http) { }
+    constructor(private http: Http, private toastr: ToastsManager) { }
 
     getStores(): Promise<Store[]>{
         return this.http.get("http://milenabooks.azurewebsites.net/api/Store/")
@@ -21,21 +20,30 @@ export class StoreService {
     createStore(store) : Promise<Store>{
         return this.http.post("http://milenabooks.azurewebsites.net/api/Store/", store)
             .toPromise()
-            .then(response => response.json())
+            .then((response) => {
+                this.toastr.success(store.Name + " store was successfully created you mama's boy!");
+                return response.json();
+            })
             .catch(this.handleError);
     }
 
     updateStore(store : Store): Promise<Store>{
         return this.http.put("http://milenabooks.azurewebsites.net/api/store/" + store.Id, store)
             .toPromise()
-            .then(response => response.json() as Store)
+            .then((response) => {
+                this.toastr.success("The store's name was successfully updated you idiot!");
+                return response.json() as Store;
+            })
             .catch(this.handleError);
     }
 
     deleteStore(id): Promise<Store>{
         return this.http.delete("http://milenabooks.azurewebsites.net/api/Store/" + id)
             .toPromise()
-            .then(response => response.json())
+            .then((response) => {
+                this.toastr.success("The store was successfully fucking removed!");
+                return response.json();
+            })
             .catch(this.handleError);
     }
 
@@ -49,12 +57,15 @@ export class StoreService {
     addBookToStore(data): Promise{
         return this.http.post("http://milenabooks.azurewebsites.net/api/store/book", data)
             .toPromise()
-            .then(response => response.json())
+            .then((response) => {
+                this.toastr.success("The fucking book was successfully added!");
+                return response.json();
+            })
             .catch(this.handleError);
     }
 
      private handleError(error: any): Promise<any> {
-        console.error('An error occurred', error);
-        return Promise.reject(error.message || error);
+         this.toastr.error('There is some god smacking error!', 'Error!', {toastLife: 3000});
+         return Promise.reject(error.message || error);
     }
 }

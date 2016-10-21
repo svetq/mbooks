@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ActivatedRoute, Params }   from '@angular/router';
-import {Book} from "../model/book";
-import { BookService }      from '../../Services/book-service';
+import {Book} from "./book";
+import { BookService }      from './book-service';
 import { Router }           from '@angular/router';
 
 @Component({
     selector: 'book-details',
     moduleId: module.id,
-    templateUrl: '../views/book-details.html',
+    templateUrl: './book-details.html',
     providers: [BookService]
 })
 

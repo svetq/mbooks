@@ -1,13 +1,13 @@
 import {Component} from "@angular/core";
-import {StoreService} from "../../Services/store-service";
+import {StoreService} from "./store-service";
 import {Input} from '@angular/core';
-import {Book} from "../../Books/model/book";
-import {Store} from "../model/store";
+import {Book} from "../books/book";
+import {Store} from "./store";
 
 @Component({
     selector: 'add-multiple-books',
     moduleId: module.id,
-    templateUrl: '../views/add-multiple-books.html',
+    templateUrl: './add-multiple-books.html',
     providers: [StoreService]
 })
 

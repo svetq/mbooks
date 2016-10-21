@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { TypeaheadModule, DropdownModule } from 'ng2-bootstrap/ng2-bootstrap';
-import { StoresComponent } from './components/stores.component'
-import { StoreService } from '../Services/store-service';
-import { StoreForm } from './components/store-form.component'
-import { SelectStore } from './components/select-store.component'
-import { AddSingleBook } from "./components/add-single-book.component";
-import { AddMultipleBooks } from './components/add-multiple-books.component'
-import { StoreOptions } from './components/store-options.component'
+import { StoresComponent } from './stores.component'
+import { StoreService } from './store-service';
+import { StoreForm } from './store-form.component'
+import { SelectStore } from './select-store.component'
+import { AddSingleBook } from "./add-single-book.component";
+import { AddMultipleBooks } from './add-multiple-books.component'
+import { StoreOptions } from './store-options.component'
 
 @NgModule({
     imports: [

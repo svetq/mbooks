@@ -1,15 +1,15 @@
 import { Component, EventEmitter, OnInit, Input, Output, SimpleChange, OnChanges } from '@angular/core';
 import 'rxjs/add/observable/of';
 
-import {Book} from "../../Books/model/book";
-import { Store } from '../model/store';
-import { StoreService } from '../../Services/store-service';
-import { BookService } from '../../Services/book-service';
+import {Book} from "../books/book";
+import { Store } from './store';
+import { StoreService } from './store-service';
+import { BookService } from '../books/book-service';
 
 @Component({
     selector: 'store-form',
     moduleId: module.id,
-    templateUrl: '../views/store-form.html',
+    templateUrl: './store-form.html',
     providers: [StoreService]
 })
 
@@ -59,34 +59,16 @@ export class StoreForm implements OnChanges, OnInit{
                     .then((stores) =>
                     {
                         this.stores = stores;
-                        console.log("this stores = ", this.stores);
                         this.onStoreCreate.emit(this.stores);
                     });
             })
     }
 
     saveChanges() {
-        //let storeId = this.store.Id;
-
         this.storeService.updateStore(this.store)
-            .then((res) => {
-                //this.resetForm();
-                this.onStoreUpdate.emit(res as Store);
-                //this.addBooksToStore(storeId);
-            });
+            .then(res => this.onStoreUpdate.emit(res as Store));
     }
 
-    // deleteStore(store){
-    //     this.storeService.deleteStore(store.Id);
-    //     this.resetForm();
-    //     this.onStoreDelete.emit(store as Store);
-    // }
-    //
-    // cancelEditing(): void {
-    //     this.resetForm();
-    //     this.onCancel.emit();
-    // };
-    //
     resetForm(){
         this.store = new Store();
         this.isEditing = false;

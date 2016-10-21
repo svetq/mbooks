@@ -6,8 +6,10 @@ import { routing } from './app.routing';
 import { AppComponent } from './app.components';
 import { TypeaheadModule, DropdownModule } from 'ng2-bootstrap/ng2-bootstrap';
 
-import {BooksModule} from './Books/books.module';
-import {StoresModule} from './Stores/stores.module'
+import {BooksModule} from './books/books.module';
+import {StoresModule} from './stores/stores.module'
+
+import {ToastModule} from 'ng2-toastr/ng2-toastr';
 
 @NgModule({
     imports: [
@@ -18,7 +20,8 @@ import {StoresModule} from './Stores/stores.module'
         TypeaheadModule,
         DropdownModule,
         StoresModule,
-        BooksModule
+        BooksModule,
+        ToastModule
     ],
     declarations: [AppComponent],
     bootstrap: [AppComponent]

@@ -1,16 +1,16 @@
 import {FormControl, FormGroup} from "@angular/forms";
 import { Observable } from 'rxjs/Observable';
-import {StoreService} from "../../Services/store-service";
-import {BookService} from "../../Services/book-service";
-import { TypeaheadMatch } from '../../../node_modules/ng2-bootstrap/components/typeahead/typeahead-match.class';
+import {StoreService} from "./store-service";
+import {BookService} from "../books/book-service";
+import { TypeaheadMatch } from '../../node_modules/ng2-bootstrap/components/typeahead/typeahead-match.class';
 import {Component, Input} from '@angular/core';
-import {Book} from "../../Books/model/book";
-import {Store} from "../model/store";
+import {Book} from "../books/book";
+import {Store} from "./store";
 
 @Component({
     selector: 'add-single-book',
     moduleId: module.id,
-    templateUrl: '../views/add-single-book.html',
+    templateUrl: './add-single-book.html',
     providers: [StoreService, BookService]
 })
 
